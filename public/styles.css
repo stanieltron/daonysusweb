@@ -1,0 +1,256 @@
+@font-face {
+    font-family: CustomFont;
+    src: url('Greconian.ttf');
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(222, 233, 230);
+    
+}
+
+.container {
+    width: 100%;
+    background-color: rgb(222, 233, 230);
+    padding: 0;
+    position: relative;
+   
+    display:flex;
+    flex-direction: column;
+    overflow: hidden; /* Add this line to hide overflow */
+  
+}
+
+.headertext {
+    position: relative;
+    z-index: 6;
+    text-align: center;
+    overflow: none;
+ 
+}
+
+.title {
+    margin: 0px;
+    font-size: 10vw;
+    font-family: CustomFont;
+   
+    max-width: 100%;
+}
+
+.subtitle {
+    margin: 0px;
+    font-size: 2.5vw;
+    /* 1/4 of 10vw */
+    font-family: CustomFont;
+  
+}
+
+@media (max-width: 800px) {
+    .title {
+        font-size: 12vw;
+        /* Slightly larger on small screens */
+    }
+
+    .subtitle {
+        font-size: 3vw;
+        /* Adjust accordingly */
+    }
+}
+
+@media (max-width: 600px) {
+    .title {
+        font-size: 13vw;
+        /* Even larger on very small screens */
+    }
+
+    .subtitle {
+        font-size: 3.33vw;
+        /* Adjust accordingly */
+    }
+}
+
+@media (max-width: 400px) {
+    .title {
+        font-size: 15vw;
+        /* Largest on the smallest screens */
+    }
+
+    .subtitle {
+        font-size: 3.75vw;
+        /* Adjust accordingly */
+    }
+}
+
+.logo {
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+
+
+.layer0 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-image: url('layer0.png');
+    background-repeat: no-repeat;
+    background-position:  center top ;
+}
+
+.layer1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    background-image: url('layer1.png');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+
+.layer2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    background-image: url('layer2.png');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+
+.layer3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 4;
+    background-image: url('layer3.png');
+  
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+
+
+
+#gleamPart {
+    position: absolute;
+    left: 50%;
+   
+    z-index: 6;
+    transform-origin: center;
+ 
+   border: solid 4px green;
+  
+}
+
+.headertext {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 6;
+    text-align: center;
+    overflow: none;
+  
+}
+
+.images-wrapper{
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: blue;
+    height: auto;
+}
+
+.theRest {
+    position: relative;
+    width: 100%;
+    height: 2000px;
+    background-color: rgb(222, 233, 230);
+    overflow: visible;
+    border: 5px solid black;
+}
+
+.theRest img {
+    position: absolute;
+    z-index: 10; /* Highest z-index to overlay everything */
+    width: 20%; /* Adjust size as needed */
+    height: auto;
+
+}
+
+.g1, .g2, .g3, .g4 {
+    position: absolute;
+   
+
+}
+
+.wobble-left {
+    animation: wobble-left 1s infinite;
+}
+
+.wobble-right {
+    animation: wobble-right 1s infinite;
+}
+
+@keyframes wobble-left {
+    0%, 100% {
+        transform: translateX(0) translateY(0) rotate(0deg) scaleX(-1);
+    }
+    25% {
+        transform: translateX(-2px) translateY(2px) rotate(-2deg) scaleX(-1);
+    }
+    50% {
+        transform: translateX(2px) translateY(-2px) rotate(2deg) scaleX(-1);
+    }
+    75% {
+        transform: translateX(-2px) translateY(2px) rotate(-2deg) scaleX(-1);
+    }
+}
+
+@keyframes wobble-right {
+    0%, 100% {
+        transform: translateX(0) translateY(0) rotate(0deg) scaleX(1);
+    }
+    25% {
+        transform: translateX(-2px) translateY(2px) rotate(-2deg) scaleX(1);
+    }
+    50% {
+        transform: translateX(2px) translateY(-2px) rotate(2deg) scaleX(1);
+    }
+    75% {
+        transform: translateX(-2px) translateY(2px) rotate(-2deg) scaleX(1);
+    }
+}
+
+.square-area {
+    position: absolute;
+    border: 2px dashed red;
+    width: 50%;
+    height: 25%;
+}
+
+.square-area1 {
+    position: absolute;
+    border: 2px dashed rgb(21, 17, 248);
+    width: 50%;
+    height: 25%;
+}
+
+/* Ensure that the images stay within their areas */
+.g1, .g2, .g3, .g4, .g5, .g6, .g7, .g8{
+    position: absolute;
+    border: solid 3px green
+}
+
+#area4 {
+    
+    position: absolute;
+    overflow:hidden;
+}
